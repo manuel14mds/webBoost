@@ -1,10 +1,157 @@
 
 body{
-    background-color: aqua;
+    background-color: #009D71;
 }
 .working h1{
     text-align: center;
 }
 .working img{
     width: 100%;
+}
+/*_______________________________--------________________________________*/
+/* ----+++++_____________________ HEADER ______________________+++++---- */
+/*_______________________________--------________________________________*/
+.navbar-brand{
+    margin-right: 95px;
+}
+
+
+
+/*_______________________________--------________________________________*/
+/* ----+++++_____________________  MAIN ______________________+++++---- */
+/*_______________________________--------________________________________*/
+
+
+/*              __              banner               __              */
+.banner{
+    height: 50vh;
+    padding: auto;
+    background-color: beige;
+    background-image: url(../img/main.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner img{
+    width: 94%;
+    margin-bottom: 25px;
+}
+.banner ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0px;
+}
+.banner ul li{
+    list-style: none;
+    padding: 10px;
+}
+
+/*              __              jewelry cards section              __              */
+.cards{
+    background-color: thistle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.cards .item{
+    background-color: tomato;
+    width: 90vw;
+    height: auto;
+    margin: 10px;
+    border-radius: 100px;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-body a{
+    width: 50%;
+}
+
+/*              __              carousel section              __              */
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutText__container{
+    background-color: wheat;
+    padding: 3vw;
+    text-align: justify;
+}
+.aboutCarousel__container{
+    background-color: violet;
+}
+
+/*              __              message section              __              */
+
+.message{
+    background-color: yellowgreen;
+    background-image: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    align-items: flex-end;
+}
+.message h2{
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+    text-align: left;
+    padding: 2vw;
+    
+}
+
+/*              __              contact section              __              */
+.contact{
+    background-color: blanchedalmond;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.form{
+    background-color: burlywood;
+}
+.form form{
+    padding: 10px;
+}
+.location iframe{
+    width: 100%;
+ 
+}
+
+
+/*_______________________________--------________________________________*/
+/* ----+++++_____________________ FOOTER ______________________+++++---- */
+/*_______________________________--------________________________________*/
+
+footer{
+    height: 15vh;
+}
+footer div div h5{
+    text-align: center;
+    padding: 5px;
+}
+.footer__socialMedia ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+.footer__socialMedia ul li{
+    display: inline;
+    padding: 5px;
+    list-style: none;
 }

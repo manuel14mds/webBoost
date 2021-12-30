@@ -14,11 +14,28 @@ body{
 /*_______________________________--------________________________________*/
 /* ----+++++_____________________ HEADER ______________________+++++---- */
 /*_______________________________--------________________________________*/
+
 .navbar{
-    background-color: white;
+    background-color: #A7C4BC;
 }
 .navbar-brand{
-    margin-right: 95px;
+    margin-right: 80px;
+}
+
+.nav-item a{
+    font-size: 20px;
+}
+.collapse{
+    justify-content: center;
+}
+.nav-item {
+    background-color: #A7C4BC;
+}
+.dropdown-menu{
+    background-color: #DFEEEA ;
+}
+.navbar-collapse{
+    width: 100vw;
 }
 
 
@@ -30,7 +47,7 @@ body{
 
 /*              __              banner               __              */
 .banner{
-    height: 50vh;
+    height: 60vh;
     padding: auto;
     background-image: url(../img/main.jpg);
     background-size: cover;
@@ -57,7 +74,7 @@ body{
 
 /*              __              jewelry cards section              __              */
 .cards{
-    background-color: #009D71;
+    background-color: #DFEEEA;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -79,10 +96,13 @@ body{
 .card-body a{
     width: 50%;
 }
+.btn{
+    background-color: #2F5D62;
+}
 
 /*              __              carousel section              __              */
 .about{
-    background-color: #00D096;
+    background-color: #5E8B7E;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,8 +122,7 @@ body{
 /*              __              message section              __              */
 
 .message{
-    background-color: yellowgreen;
-    background-image: url(../img/background.jpg);
+    background-image: url(../img/bg3.svg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -122,7 +141,7 @@ body{
 
 /*              __              contact section              __              */
 .contact{
-    background-color: white;
+    background-color: #5E8B7E;
     padding-top: 15px;
     padding-bottom: 15px;
     display: flex;
@@ -136,20 +155,29 @@ body{
     text-align: center;
 }
 .form{
-    background-color: #009D71;
+    background-color: #A7C4BC;
     padding: 10px;
+    border-radius: 5px;
 }
 form{
     padding: 2px;
 }
 .location iframe{
     width: 100vw;
- 
+}
+.bg-info{
+    background-color: #2F5D62 !important;
 }
 
 /* ----+++++_____________________ Gallery General ______________________+++++---- */
 .galleryContainer{
-    background-color: #009E71;
+    background-color: #5E8B7E;
+    background-image: url(../img/bg3.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -168,7 +196,7 @@ form{
     transform: scale(1.2);
 }
 .bottonTop{
-    background-color: #0980AB;
+    background-color: #2F5D62;
     text-align: center;
     margin-top: 7px;
 }
@@ -249,6 +277,21 @@ form{
     background-size: cover;
     background-position: center;
 }
+.earingsGallery .image4{
+    background-image: url(../img/earing4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.earingsGallery .image5{
+    background-image: url(../img/earing5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.earingsGallery .image6{
+    background-image: url(../img/earing6.jpg);
+    background-size: cover;
+    background-position: center;
+}
 
 
 
@@ -259,11 +302,12 @@ form{
 /*_______________________________--------________________________________*/
 
 footer{
-    background-color: #00D096;
+    background-color: #2F5D62;
     height: 15vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    color: white;
 }
 footer div div h5{
     text-align: center;

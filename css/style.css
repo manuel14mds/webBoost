@@ -2,8 +2,14 @@
 #00D096
 #009E71
 */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
 body{
-    background-color: #009D71;
+    background-color: #A7C4BC;
 }
 .working h1{
     text-align: center;
@@ -49,7 +55,7 @@ body{
 .banner{
     height: 60vh;
     padding: auto;
-    background-image: url(../img/main.jpg);
+    background-image: url(../img/main2.PNG);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -127,7 +133,7 @@ body{
     background-position: center;
     background-size: cover;
     width: 100vw;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     align-items: flex-end;
 }
@@ -136,6 +142,7 @@ body{
     text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
     text-align: left;
     padding: 2vw;
+    text-transform: uppercase;
     
 }
 
@@ -170,6 +177,18 @@ form{
 }
 
 /* ----+++++_____________________ Gallery General ______________________+++++---- */
+.galleryTittle{
+    background-color: #5E8B7E;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.galleryTittle h1{
+    color: #DFEEEA;
+}
+
+
 .galleryContainer{
     background-color: #5E8B7E;
     background-image: url(../img/bg3.svg);
@@ -261,7 +280,7 @@ form{
     background-position: center;
 }
 
-/* ----+++++_____________________ Ring Page ______________________+++++---- */
+/* ----+++++_____________________ Earing Page ______________________+++++---- */
 .earingsGallery .image1{
     background-image: url(../img/earing1.jpg);
     background-size: cover;
@@ -293,7 +312,166 @@ form{
     background-position: center;
 }
 
+/* ----+++++_____________________ Pendants Page ______________________+++++---- */
+.pendantsGallery .image1{
+    background-image: url(../img/pen1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.pendantsGallery .image2{
+    background-image: url(../img/pen2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.pendantsGallery .image3{
+    background-image: url(../img/pen3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.pendantsGallery .image4{
+    background-image: url(../img/pen4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.pendantsGallery .image5{
+    background-image: url(../img/pen5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.pendantsGallery .image6{
+    background-image: url(../img/pen6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.pendantsGallery .image7{
+    background-image: url(../img/pen7.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.pendantsGallery .image8{
+    background-image: url(../img/pen8.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.pendantsGallery .image9{
+    background-image: url(../img/pen9.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/* ----+++++_____________________ Bracelets Page ______________________+++++---- */
+.braceletsGallery .image1{
+    background-image: url(../img/brac1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.braceletsGallery .image2{
+    background-image: url(../img/brac2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.braceletsGallery .image3{
+    background-image: url(../img/brac3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.braceletsGallery .image4{
+    background-image: url(../img/brac4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.braceletsGallery .image5{
+    background-image: url(../img/brac5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.braceletsGallery .image6{
+    background-image: url(../img/brac6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/* ----+++++_____________________ Stones Page ______________________+++++---- */
+.stonesGallery .image1{
+    background-image: url(../img/st1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.stonesGallery .image2{
+    background-image: url(../img/st2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.stonesGallery .image3{
+    background-image: url(../img/st3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.stonesGallery .image4{
+    background-image: url(../img/st4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.stonesGallery .image5{
+    background-image: url(../img/st5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.stonesGallery .image6{
+    background-image: url(../img/st6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.stonesGallery .image7{
+    background-image: url(../img/st7.jpg);
+    background-size: cover;
+    background-position: center;
+}
 
+/* ----+++++_____________________ Sterling Silver Page ______________________+++++---- */
+.silverGallery .image1{
+    background-image: url(../img/ss1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.silverGallery .image2{
+    background-image: url(../img/ss2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.silverGallery .image3{
+    background-image: url(../img/ss3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.silverGallery .image4{
+    background-image: url(../img/ss4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.silverGallery .image5{
+    background-image: url(../img/ss5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.silverGallery .image6{
+    background-image: url(../img/ss6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.silverGallery .image7{
+    background-image: url(../img/ss7.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.silverGallery .image8{
+    background-image: url(../img/ss8.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.silverGallery .image9{
+    background-image: url(../img/ss9.jpg);
+    background-size: cover;
+    background-position: center;
+}
 
 
 

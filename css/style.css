@@ -53,6 +53,7 @@ body{
 /*              __              jewelry cards section              __              */
 .cards{
     background-color: thistle;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,11 +84,16 @@ body{
 }
 .aboutText__container{
     background-color: wheat;
-    padding: 3vw;
+    padding: 4vw;
     text-align: justify;
+}
+.aboutText__container h3{
+    padding: 3vw;
+    text-align: center;
 }
 .aboutCarousel__container{
     background-color: violet;
+    width: 100vw;
 }
 
 /*              __              message section              __              */
@@ -121,16 +127,113 @@ body{
     align-items: center;
     justify-content: space-evenly;
 }
+.contact h2{
+    padding: 20px;
+    text-align: center;
+}
 .form{
     background-color: burlywood;
-}
-.form form{
     padding: 10px;
 }
+form{
+    padding: 2px;
+    border: 1px black solid;
+}
 .location iframe{
-    width: 100%;
+    width: 100vw;
  
 }
+
+/* ----+++++_____________________ Gallery General ______________________+++++---- */
+.galleryContainer{
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.image{
+    width: 80vw;
+    height: 80vw;
+    background-color: azure;
+    box-sizing: border-box;
+    border: 4px solid darkcyan;
+    margin: 0px;
+    padding: 0px;
+}
+.image:hover{
+    transform: scale(1.2);
+}
+.bottonTop{
+    background-color: darkgreen;
+    text-align: center;
+    margin-top: 7px;
+}
+.bottonTop :hover{
+    transform: scale(1.5);
+}
+.bottonTop a{
+    text-decoration: none;
+    font-size: 30px;
+    color: darkgrey;
+}
+/* ----+++++_____________________ Ring Page ______________________+++++---- */
+
+.image1{
+    background-image: url(../img/ring1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.image2{
+    background-image: url(../img/ring2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.image3{
+    background-image: url(../img/ring3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.image4{
+    background-image: url(../img/ring4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.image5{
+    background-image: url(../img/ring5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.image6{
+    background-image: url(../img/ring6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.image7{
+    background-image: url(../img/ring7.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.image8{
+    background-image: url(../img/ring8.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.image9{
+    background-image: url(../img/ring9.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.image10{
+    background-image: url(../img/ring10.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
 
 
 /*_______________________________--------________________________________*/
@@ -139,19 +242,139 @@ body{
 
 footer{
     height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 footer div div h5{
     text-align: center;
     padding: 5px;
+    background-color: violet;
 }
 .footer__socialMedia ul{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0px;
+    background-color: violet;
 }
 .footer__socialMedia ul li{
     display: inline;
     padding: 5px;
     list-style: none;
 }
+
+
+
+
+
+/*_______________________________xxxxxxxxxxxxx________________________________*/
+/* ----+++++_____________________ MEDIA QUERY ______________________+++++---- */
+/*_______________________________xxxxxxxxxxxxx________________________________*/
+
+
+@media (min-width: 768px) {
+    /*____________________________xxxxxx CARDS SECTION 768px MEDIUM xxxxxxx_____________________________*/
+    .cards{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .cards .item{
+        width: 40vw;
+    }
+    /*____________________________xxxxxx ABOUT SECTION 768px MEDIUM xxxxxxx_____________________________*/
+    .about{
+        flex-direction: row-reverse;
+    }
+    .aboutText__container{
+        width: 40vw;
+        height: 40vw;
+        overflow-y: scroll;
+    }
+    .aboutText__container p{
+        font-size: 0.8;
+    }
+    .aboutCarousel__container{
+        width: 60vw;
+    }
+    /*____________________________xxxxxx CONTACT SECTION 768px MEDIUM xxxxxxx_____________________________*/
+    .contact{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .contact h2{
+        width: 100vw;
+    }
+    .form{
+        width: 50vw;
+    }
+    .location{
+        width: 50vw;
+        box-sizing: border-box;
+        border: 2px white solid;
+    }
+    .location iframe{
+        width: 100%;
+    }
+    /*____________________________xxxxxx CARDS SECTION 768px MEDIUM xxxxxxx_____________________________*/
+    .galleryContainer{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .image{
+        width: 35vw;
+        height: 35vw;
+    }
+    
+}
+
+
+@media (min-width: 992px) {
+    /*____________________________xxxxxx CARDS SECTION 992px LARGE xxxxxxx_____________________________*/
+    .cards .item{
+        width: 30vw;
+    }
+    /*____________________________xxxxxx ABOUT SECTION 992px LARGE xxxxxxx_____________________________*/
+ 
+    .aboutText__container{
+        width: 40vw;
+        height: 40vw;
+        overflow-x:unset;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .aboutText__container p{
+        font-size: 0.5;
+    }
+    .aboutText__container h3{
+        font-size: 0.8;
+        padding: 0px;
+    }
+
+    /*____________________________xxxxxx CONTACT SECTION 992px LARGE xxxxxxx_____________________________*/
+    .form{
+        width: 40vw;
+        margin: 0px;
+    }
+    .location{
+        width: 40vw;
+        margin: 0px;
+    }
+    /*____________________________xxxxxx CARDS SECTION 992px LARGE xxxxxxx_____________________________*/
+    .galleryContainer{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .image{
+        width: 25vw;
+        height: 25vw;
+    }
+    
+    
+}
+
+
+
+

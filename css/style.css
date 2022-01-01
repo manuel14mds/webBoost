@@ -80,6 +80,10 @@ body{
     list-style: none;
     padding: 10px;
 }
+.banner ul li a{
+    color: black;
+}
+
 
 /*              __              jewelry cards section              __              */
 .cards{

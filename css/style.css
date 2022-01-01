@@ -1,6 +1,9 @@
 /* 
-#00D096
-#009E71
+#2F5D62
+#5E8B7E
+#A7C4BC
+#DFEEEA
+
 */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 
@@ -106,7 +109,7 @@ body{
     background-color: #2F5D62;
 }
 
-/*              __              carousel section              __              */
+/*              __              about carousel section              __              */
 .about{
     background-color: #5E8B7E;
     display: flex;
@@ -115,11 +118,15 @@ body{
 }
 .aboutText__container{
     padding: 4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: justify;
+
 }
 .aboutText__container h3{
-    padding: 3vw;
-    text-align: center;
+    padding-top: 3vw;
 }
 .aboutCarousel__container{
     width: 100vw;
@@ -216,8 +223,13 @@ form{
 }
 .bottonTop{
     background-color: #2F5D62;
-    text-align: center;
-    margin-top: 7px;
+    box-sizing: border-box;
+    height: 70px;
+    border: #DFEEEA 2px solid;
+    margin: 7px 0px 7px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .bottonTop :hover{
     transform: scale(1.5);
@@ -226,6 +238,8 @@ form{
     text-decoration: none;
     font-size: 30px;
     color: white;
+    width: 70%;
+    text-align: center;
 }
 /* ----+++++_____________________ Ring Page ______________________+++++---- */
 
@@ -481,15 +495,28 @@ form{
 
 footer{
     background-color: #2F5D62;
-    height: 15vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    color: white;
+    color: #DFEEEA;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px !important;
 }
-footer div div h5{
+.column{
+    float: left;
+    width: 100vw;
+    padding: 20px;
+}
+.footer__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 5px;
+}
+.footer__socialMedia{
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .footer__socialMedia ul{
     display: flex;
@@ -497,13 +524,21 @@ footer div div h5{
     align-items: center;
     padding: 0px;
 }
+.footer__socialMedia ul li a{
+    color: #DFEEEA;
+    padding: 6px;
+}
 .footer__socialMedia ul li{
     display: inline;
-    padding: 5px;
+
     list-style: none;
+} 
+.footer__message{
+    text-align: center;
 }
-
-
+.footer__signature{
+    text-align: center;
+}
 
 
 
@@ -526,12 +561,10 @@ footer div div h5{
         flex-direction: row-reverse;
     }
     .aboutText__container{
+        justify-content: flex-start;
         width: 40vw;
         height: 40vw;
         overflow-y: scroll;
-    }
-    .aboutText__container p{
-        font-size: 0.8;
     }
     .aboutCarousel__container{
         width: 60vw;
@@ -565,7 +598,13 @@ footer div div h5{
         width: 35vw;
         height: 35vw;
     }
-    
+    /*____________________________xxxxxx FOOTER 768px MEDIUM xxxxxxx_____________________________*/
+    .footer__info{
+        width: 60%;
+    }
+    .footer__socialMedia{
+        width: 40%;
+    }
 }
 
 
@@ -580,8 +619,7 @@ footer div div h5{
         width: 40vw;
         height: 40vw;
         overflow-x:unset;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        justify-content: center;
     }
     .aboutText__container p{
         font-size: 0.5;
@@ -610,6 +648,7 @@ footer div div h5{
         width: 25vw;
         height: 25vw;
     }
+    /*____________________________xxxxxx FOOTER 992px LARGE xxxxxxx_____________________________*/
     
     
 }

@@ -98,7 +98,6 @@ body{
     width: 80vw;
     height: auto;
     margin: 10px;
-    border-radius: 100px;
 }
 .card-body{
     display: flex;
@@ -111,7 +110,24 @@ body{
 }
 .btn{
     background-color: #2F5D62;
+    width: fit-content;
 }
+.card__btn:link, .card__btn:visited{
+    background-color: #2f5d62;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.card__btn:hover, .card__btn:active{
+    background-color: #A7C4BC;
+    color: black;
+    transition: 1s;
+    box-shadow: 0 0 5px #A7C4BC, 0 0 25px #A7C4BC, 0 0 50px #A7C4BC, 0 0 200px #A7C4BC;
+}
+ 
 
 /*              __              about carousel section              __              */
 .about{
@@ -127,7 +143,6 @@ body{
     justify-content: center;
     align-items: center;
     text-align: justify;
-
 }
 .aboutText__container h3{
     padding-top: 3vw;
@@ -154,7 +169,6 @@ body{
     text-align: left;
     padding: 2vw;
     text-transform: uppercase;
-    
 }
 
 /*              __              contact section              __              */
@@ -207,7 +221,6 @@ form{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -221,6 +234,7 @@ form{
     border: 4px solid white;
     margin: 0px;
     padding: 0px;
+    transition: 1s;
 }
 .image:hover{
     transform: scale(1.2);

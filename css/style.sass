@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap')
-    
+
 $color1: #2f5d62
 $color2: #5E8B7E
 $color3: #A7C4BC
@@ -17,44 +17,48 @@ body
 //_______________________________--------________________________________
 // ----+++++_____________________ HEADER ______________________+++++---- 
 //_______________________________--------________________________________
+@mixin sizes($width, $height)
+    width: $width
+    height: $height
 
 .navbar
     background-color: $color3
+    & .navbar-brand
+        margin-right: 80px
 
-.navbar-brand
-    margin-right: 80px
+    & .collapse
+        justify-content: center
+        @include sizes(100vw, auto)
 
-.nav-item
-    background-color: $color3
-    & a
-        font-size: 20px
+        & .navbar-nav
+            & .nav-item
+                background-color: $color3
+                & .nav-link
+                    font-size: 20px
 
-.collapse
-    justify-content: center
-
-.dropdown-menu
-    background-color: $color4
-
-.navbar-collapse
-    width: 100vw
+                & .dropdown-menu
+                    background-color: $color4
 
 //_______________________________--------________________________________
 // ----+++++_____________________  MAIN ______________________+++++---- 
 //_______________________________--------________________________________
 
 //              __              banner               __              *
-.banner
-    height: 60vh
-    padding: auto
-    background-image: url(../img/main2.PNG)
+.backgroundImage
+    background-repeat: no-repeat
     background-size: cover
     background-position: center
+.banner
+    @include sizes(auto, 60vh)
+    padding: auto
+    background-image: url(../img/main2.PNG)
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
+    @extend .backgroundImage
     & img
-        width: 94%
+        @include sizes(94%, auto)
         margin-bottom: 25px
     & ul
         display: flex
@@ -70,7 +74,7 @@ body
 //              __              jewelry cards section              __              *
 .cards
     background-color: $color4
-    width: 100%
+    @include sizes(100%, auto)
     display: flex
     flex-direction: column
     align-items: center
@@ -79,18 +83,14 @@ body
         width: 80vw
         height: auto
         margin: 10px
-
-.card-body
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    & a
-        width: 50%
-
-.btn
-    background-color: $color1
-    width: fit-content
+    & .card
+        & .card-body
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            & a
+                width: 50%
 
 .card__btn:link, .card__btn:visited
     background-color: $color2
@@ -113,30 +113,27 @@ body
     display: flex
     flex-direction: column
     align-items: center
-
-.aboutText__container
-    padding: 4vw
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    text-align: justify
-    & h3
-        padding-top: 3vw
-
-.aboutCarousel__container
-    width: 100vw
+    & .aboutText__container
+        padding: 4vw
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        text-align: justify
+        & h3
+            padding-top: 3vw
+    & .aboutCarousel__container
+        width: 100vw
 
 //              __              message section              __              *
 .message
     background-image: url(../img/bg3.svg)
     background-attachment: fixed
-    background-position: center
-    background-size: cover
     width: 100vw
     height: 60vh
     display: flex
     align-items: flex-end
+    @extend .backgroundImage
     & h2
         color: white
         text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black
@@ -145,6 +142,7 @@ body
         text-transform: uppercase
 
 //             __              contact section              __              *
+
 .contact
     background-color: $color2
     padding-top: 15px
@@ -157,18 +155,17 @@ body
     & h2
         padding: 20px
         text-align: center
-.form
-    background-color: $color3
-    padding: 10px
-    border-radius: 5px
-form
-    padding: 2px
-.location 
-    & iframe
-        width: 100vw
-
-.bg-info
-    background-color: $color1 !important
+        & .form
+            background-color: $color3
+            padding: 10px
+            border-radius: 5px
+            & form
+                padding: 2px
+                & .bg-info
+                    background-color: $color1 !important
+        & .location
+            & iframe
+            width: 100vw
 
 // ----+++++_____________________ Gallery General ______________________+++++---- *
 .galleryTittle
@@ -183,15 +180,13 @@ form
 .galleryContainer
     background-color: $color2
     background-image: url(../img/bg3.svg)
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: center
     background-attachment: fixed
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
     gap: 10px
+    @extend .backgroundImage
 
 .image
     width: 80vw
@@ -224,293 +219,16 @@ form
 .bottonTop :hover
     transform: scale(1.5)
 
-// ----+++++_____________________ Ring Page ______________________+++++---- *
-.ringsGallery
-    & .image1
-        background-image: url(../img/ring1.jpg)
-        background-size: cover
-        background-position: center
+//                -+-+-+-++-+--+-+            filling gallery in           --++-+--++-+-+-++--+-+
+$galleryName: ("ring" : 10, "earing" : 6, "pendant" : 9, "bracelet" : 6, "stone" : 7, "silver" : 9)
 
-.ringsGallery
-    & .image2
-        background-image: url(../img/ring2.jpg)
-        background-size: cover
-        background-position: center
-
-.ringsGallery
-    & .image3
-        background-image: url(../img/ring3.jpg)
-        background-size: cover
-        background-position: center
-
-.ringsGallery
-    & .image4
-        background-image: url(../img/ring4.jpg)
-        background-size: cover
-        background-position: center
-
-.ringsGallery
-    & .image5
-        background-image: url(../img/ring5.jpg)
-        background-size: cover
-        background-position: center
-
-.ringsGallery
-    & .image6
-        background-image: url(../img/ring6.jpg)
-        background-size: cover
-        background-position: center
-
-.ringsGallery
-    & .image7
-        background-image: url(../img/ring7.jpg)
-        background-size: cover
-        background-position: center
-
-.ringsGallery
-    & .image8
-        background-image: url(../img/ring8.jpg)
-        background-size: cover
-        background-position: center
-
-.ringsGallery
-    & .image9
-        background-image: url(../img/ring9.jpg)
-        background-size: cover
-        background-position: center
-
-.ringsGallery
-    & .image10
-        background-image: url(../img/ring10.jpg)
-        background-size: cover
-        background-position: center
-
-// ----+++++_____________________ Earing Page ______________________+++++---- *
-.earingsGallery
-    & .image1
-        background-image: url(../img/earing1.jpg)
-        background-size: cover
-        background-position: center
-
-.earingsGallery
-    & .image2
-        background-image: url(../img/earing2.jpg)
-        background-size: cover
-        background-position: center
-
-.earingsGallery
-    & .image3
-        background-image: url(../img/earing3.jpg)
-        background-size: cover
-        background-position: center
-
-.earingsGallery
-    & .image4
-        background-image: url(../img/earing4.jpg)
-        background-size: cover
-        background-position: center
-
-.earingsGallery
-    & .image5
-        background-image: url(../img/earing5.jpg)
-        background-size: cover
-        background-position: center
-
-.earingsGallery
-    & .image6
-        background-image: url(../img/earing6.jpg)
-        background-size: cover
-        background-position: center
-
-// ----+++++_____________________ Pendants Page ______________________+++++---- *
-.pendantsGallery
-    & .image1
-        background-image: url(../img/pen1.jpg)
-        background-size: cover
-        background-position: center
-
-.pendantsGallery
-    & .image2
-        background-image: url(../img/pen2.jpg)
-        background-size: cover
-        background-position: center
-
-.pendantsGallery
-    & .image3
-        background-image: url(../img/pen3.jpg)
-        background-size: cover
-        background-position: center
-
-.pendantsGallery
-    & .image4
-        background-image: url(../img/pen4.jpg)
-        background-size: cover
-        background-position: center
-
-.pendantsGallery
-    & .image5
-        background-image: url(../img/pen5.jpg)
-        background-size: cover
-        background-position: center
-
-.pendantsGallery
-    & .image6
-        background-image: url(../img/pen6.jpg)
-        background-size: cover
-        background-position: center
-
-.pendantsGallery
-    & .image7
-        background-image: url(../img/pen7.jpg)
-        background-size: cover
-        background-position: center
-
-.pendantsGallery
-    & .image8
-        background-image: url(../img/pen8.jpg)
-        background-size: cover
-        background-position: center
-
-.pendantsGallery
-    & .image9
-        background-image: url(../img/pen9.jpg)
-        background-size: cover
-        background-position: center
-
-// ----+++++_____________________ Bracelets Page ______________________+++++---- *
-.braceletsGallery
-    & .image1
-        background-image: url(../img/brac1.jpg)
-        background-size: cover
-        background-position: center
-
-.braceletsGallery
-    & .image2
-        background-image: url(../img/brac2.jpg)
-        background-size: cover
-        background-position: center
-
-.braceletsGallery
-    & .image3
-        background-image: url(../img/brac3.jpg)
-        background-size: cover
-        background-position: center
-
-.braceletsGallery
-    & .image4
-        background-image: url(../img/brac4.jpg)
-        background-size: cover
-        background-position: center
-
-.braceletsGallery
-    & .image5
-        background-image: url(../img/brac5.jpg)
-        background-size: cover
-        background-position: center
-
-.braceletsGallery
-    & .image6
-        background-image: url(../img/brac6.jpg)
-        background-size: cover
-        background-position: center
-
-// ----+++++_____________________ Stones Page ______________________+++++---- *
-.stonesGallery
-    & .image1
-        background-image: url(../img/st1.jpg)
-        background-size: cover
-        background-position: center
-
-.stonesGallery
-    & .image2
-        background-image: url(../img/st2.jpg)
-        background-size: cover
-        background-position: center
-
-.stonesGallery
-    & .image3
-        background-image: url(../img/st3.jpg)
-        background-size: cover
-        background-position: center
-
-.stonesGallery
-    & .image4
-        background-image: url(../img/st4.jpg)
-        background-size: cover
-        background-position: center
-
-.stonesGallery
-    & .image5
-        background-image: url(../img/st5.jpg)
-        background-size: cover
-        background-position: center
-
-.stonesGallery
-    & .image6
-        background-image: url(../img/st6.jpg)
-        background-size: cover
-        background-position: center
-
-.stonesGallery
-    & .image7
-        background-image: url(../img/st7.jpg)
-        background-size: cover
-        background-position: center
-
-// ----+++++_____________________ Sterling Silver Page ______________________+++++---- *
-.silverGallery
-    & .image1
-        background-image: url(../img/ss1.jpg)
-        background-size: cover
-        background-position: center
-
-.silverGallery
-    & .image2
-        background-image: url(../img/ss2.jpg)
-        background-size: cover
-        background-position: center
-
-.silverGallery
-    & .image3
-        background-image: url(../img/ss3.jpg)
-        background-size: cover
-        background-position: center
-
-.silverGallery
-    & .image4
-        background-image: url(../img/ss4.jpg)
-        background-size: cover
-        background-position: center
-
-.silverGallery
-    & .image5
-        background-image: url(../img/ss5.jpg)
-        background-size: cover
-        background-position: center
-
-.silverGallery
-    & .image6
-        background-image: url(../img/ss6.jpg)
-        background-size: cover
-        background-position: center
-
-.silverGallery
-    & .image7
-        background-image: url(../img/ss7.jpg)
-        background-size: cover
-        background-position: center
-
-.silverGallery
-    & .image8
-        background-image: url(../img/ss8.jpg)
-        background-size: cover
-        background-position: center
-
-.silverGallery
-    & .image9
-        background-image: url(../img/ss9.jpg)
-        background-size: cover
-        background-position: center
+@each $name, $num in $galleryName
+    .#{$name}Gallery
+        & .galleryContainer
+            @for $j from 1 through $num
+                & .image#{$j}
+                    background-image: url(../img/#{$name}#{$j}.jpg)
+                    @extend .backgroundImage
 
 //_______________________________--------________________________________*
 // ----+++++_____________________ FOOTER ______________________+++++---- *
@@ -561,99 +279,104 @@ footer
 //_______________________________xxxxxxxxxxxxx________________________________*
 // ----+++++_____________________ MEDIA QUERY ______________________+++++---- *
 //_______________________________xxxxxxxxxxxxx________________________________*
-@media (min-width: 768px) 
+@media (min-width: 540px)
     //____________________________xxxxxx CARDS SECTION 768px MEDIUM xxxxxxx_____________________________*/
     .cards
         flex-direction: row
         flex-wrap: wrap
         & .item
             width: 40vw
-    
+            & .card
+                & .card-body
+                    & a
+                        font-size: 0.8em
+                        width: 125px
+
     //____________________________xxxxxx ABOUT SECTION 768px MEDIUM xxxxxxx_____________________________*/
     .about
         flex-direction: row-reverse
-    
+
     .aboutText__container
-        justify-content: flex-start
+        justify-content: flex-end
         width: 40vw
         height: 40vw
         overflow-y: scroll
-    
+
     .aboutCarousel__container
         width: 60vw
-    
+
     //____________________________xxxxxx CONTACT SECTION 768px MEDIUM xxxxxxx_____________________________*/
     .contact
         flex-direction: row
         flex-wrap: wrap
         & h2
             width: 100vw
-    
+
     .form
         width: 50vw
-    
+
     .location
         width: 50vw
         box-sizing: border-box
         border: 2px white solid
         & iframe
             width: 100%
-    
+
     //____________________________xxxxxx CARDS SECTION 768px MEDIUM xxxxxxx_____________________________*/
     .galleryContainer
         flex-direction: row
         flex-wrap: wrap
         gap: 20px
-    
+
     .image
         width: 35vw
         height: 35vw
-    
+
     //____________________________xxxxxx FOOTER 768px MEDIUM xxxxxxx_____________________________*
     .footer__info
         width: 60%
-    
+
     .footer__socialMedia
         width: 40%
-    
 
-@media (min-width: 992px) 
+@media (min-width: 992px)
     //____________________________xxxxxx CARDS SECTION 992px LARGE xxxxxxx_____________________________*
     .cards
         & .item
             width: 30vw
+            & .card
+                & .card-body
+                    & a
+                        font-size: 1em
+                        width: 150px
 
     //____________________________xxxxxx ABOUT SECTION 992px LARGE xxxxxxx_____________________________*
     .aboutText__container
         width: 40vw
         height: 40vw
-        overflow-x:unset
+        overflow-x: unset
         justify-content: center
         & p
-            font-size: 0.5    
+            font-size: 0.5
         & h3
-            font-size: 0.8
-            padding: 0px
+            font-size: 9
+            padding: 10px
 
     //____________________________xxxxxx CONTACT SECTION 992px LARGE xxxxxxx_____________________________*
     .form
         width: 40vw
         margin: 0px
-    
+
     .location
         width: 40vw
         margin: 0px
-    
+
     //____________________________xxxxxx CARDS SECTION 992px LARGE xxxxxxx_____________________________*/
     .galleryContainer
         flex-direction: row
         flex-wrap: wrap
         gap: 20px
-    
+
     .image
         width: 25vw
         height: 25vw
-
-
-
-

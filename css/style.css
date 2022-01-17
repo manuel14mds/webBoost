@@ -12,38 +12,41 @@ body {
   background-color: #A7C4BC;
 }
 
-.navbar-brand {
+.navbar .navbar-brand {
   margin-right: 80px;
 }
 
-.nav-item {
-  background-color: #A7C4BC;
-}
-
-.nav-item a {
-  font-size: 20px;
-}
-
-.collapse {
+.navbar .collapse {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100vw;
+  height: auto;
 }
 
-.dropdown-menu {
+.navbar .collapse .navbar-nav .nav-item {
+  background-color: #A7C4BC;
+}
+
+.navbar .collapse .navbar-nav .nav-item .nav-link {
+  font-size: 20px;
+}
+
+.navbar .collapse .navbar-nav .nav-item .dropdown-menu {
   background-color: #DFEEEA;
 }
 
-.navbar-collapse {
-  width: 100vw;
+.backgroundImage, .banner, .message, .galleryContainer, .ringGallery .galleryContainer .image1, .ringGallery .galleryContainer .image2, .ringGallery .galleryContainer .image3, .ringGallery .galleryContainer .image4, .ringGallery .galleryContainer .image5, .ringGallery .galleryContainer .image6, .ringGallery .galleryContainer .image7, .ringGallery .galleryContainer .image8, .ringGallery .galleryContainer .image9, .ringGallery .galleryContainer .image10, .earingGallery .galleryContainer .image1, .earingGallery .galleryContainer .image2, .earingGallery .galleryContainer .image3, .earingGallery .galleryContainer .image4, .earingGallery .galleryContainer .image5, .earingGallery .galleryContainer .image6, .pendantGallery .galleryContainer .image1, .pendantGallery .galleryContainer .image2, .pendantGallery .galleryContainer .image3, .pendantGallery .galleryContainer .image4, .pendantGallery .galleryContainer .image5, .pendantGallery .galleryContainer .image6, .pendantGallery .galleryContainer .image7, .pendantGallery .galleryContainer .image8, .pendantGallery .galleryContainer .image9, .braceletGallery .galleryContainer .image1, .braceletGallery .galleryContainer .image2, .braceletGallery .galleryContainer .image3, .braceletGallery .galleryContainer .image4, .braceletGallery .galleryContainer .image5, .braceletGallery .galleryContainer .image6, .stoneGallery .galleryContainer .image1, .stoneGallery .galleryContainer .image2, .stoneGallery .galleryContainer .image3, .stoneGallery .galleryContainer .image4, .stoneGallery .galleryContainer .image5, .stoneGallery .galleryContainer .image6, .stoneGallery .galleryContainer .image7, .silverGallery .galleryContainer .image1, .silverGallery .galleryContainer .image2, .silverGallery .galleryContainer .image3, .silverGallery .galleryContainer .image4, .silverGallery .galleryContainer .image5, .silverGallery .galleryContainer .image6, .silverGallery .galleryContainer .image7, .silverGallery .galleryContainer .image8, .silverGallery .galleryContainer .image9 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .banner {
+  width: auto;
   height: 60vh;
   padding: auto;
   background-image: url(../img/main2.PNG);
-  background-size: cover;
-  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,6 +64,7 @@ body {
 
 .banner img {
   width: 94%;
+  height: auto;
   margin-bottom: 25px;
 }
 
@@ -89,6 +93,7 @@ body {
 .cards {
   background-color: #DFEEEA;
   width: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,7 +115,7 @@ body {
   margin: 10px;
 }
 
-.card-body {
+.cards .card .card-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,15 +131,8 @@ body {
           align-items: center;
 }
 
-.card-body a {
+.cards .card .card-body a {
   width: 50%;
-}
-
-.btn {
-  background-color: #2f5d62;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 
 .card__btn:link, .card__btn:visited {
@@ -170,7 +168,7 @@ body {
           align-items: center;
 }
 
-.aboutText__container {
+.about .aboutText__container {
   padding: 4vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -188,19 +186,17 @@ body {
   text-align: justify;
 }
 
-.aboutText__container h3 {
+.about .aboutText__container h3 {
   padding-top: 3vw;
 }
 
-.aboutCarousel__container {
+.about .aboutCarousel__container {
   width: 100vw;
 }
 
 .message {
   background-image: url(../img/bg3.svg);
   background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
   width: 100vw;
   height: 60vh;
   display: -webkit-box;
@@ -244,22 +240,22 @@ body {
   text-align: center;
 }
 
-.form {
+.contact h2 .form {
   background-color: #A7C4BC;
   padding: 10px;
   border-radius: 5px;
 }
 
-form {
+.contact h2 .form form {
   padding: 2px;
 }
 
-.location iframe {
-  width: 100vw;
+.contact h2 .form form .bg-info {
+  background-color: #2f5d62 !important;
 }
 
-.bg-info {
-  background-color: #2f5d62 !important;
+.contact h2 .location {
+  width: 100vw;
 }
 
 .galleryTittle {
@@ -283,9 +279,6 @@ form {
 .galleryContainer {
   background-color: #5E8B7E;
   background-image: url(../img/bg3.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   background-attachment: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -351,286 +344,192 @@ form {
           transform: scale(1.5);
 }
 
-.ringsGallery .image1 {
+.ringGallery .galleryContainer .image1 {
   background-image: url(../img/ring1.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.ringsGallery .image2 {
+.ringGallery .galleryContainer .image2 {
   background-image: url(../img/ring2.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.ringsGallery .image3 {
+.ringGallery .galleryContainer .image3 {
   background-image: url(../img/ring3.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.ringsGallery .image4 {
+.ringGallery .galleryContainer .image4 {
   background-image: url(../img/ring4.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.ringsGallery .image5 {
+.ringGallery .galleryContainer .image5 {
   background-image: url(../img/ring5.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.ringsGallery .image6 {
+.ringGallery .galleryContainer .image6 {
   background-image: url(../img/ring6.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.ringsGallery .image7 {
+.ringGallery .galleryContainer .image7 {
   background-image: url(../img/ring7.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.ringsGallery .image8 {
+.ringGallery .galleryContainer .image8 {
   background-image: url(../img/ring8.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.ringsGallery .image9 {
+.ringGallery .galleryContainer .image9 {
   background-image: url(../img/ring9.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.ringsGallery .image10 {
+.ringGallery .galleryContainer .image10 {
   background-image: url(../img/ring10.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.earingsGallery .image1 {
+.earingGallery .galleryContainer .image1 {
   background-image: url(../img/earing1.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.earingsGallery .image2 {
+.earingGallery .galleryContainer .image2 {
   background-image: url(../img/earing2.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.earingsGallery .image3 {
+.earingGallery .galleryContainer .image3 {
   background-image: url(../img/earing3.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.earingsGallery .image4 {
+.earingGallery .galleryContainer .image4 {
   background-image: url(../img/earing4.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.earingsGallery .image5 {
+.earingGallery .galleryContainer .image5 {
   background-image: url(../img/earing5.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.earingsGallery .image6 {
+.earingGallery .galleryContainer .image6 {
   background-image: url(../img/earing6.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
-.pendantsGallery .image1 {
-  background-image: url(../img/pen1.jpg);
-  background-size: cover;
-  background-position: center;
+.pendantGallery .galleryContainer .image1 {
+  background-image: url(../img/pendant1.jpg);
 }
 
-.pendantsGallery .image2 {
-  background-image: url(../img/pen2.jpg);
-  background-size: cover;
-  background-position: center;
+.pendantGallery .galleryContainer .image2 {
+  background-image: url(../img/pendant2.jpg);
 }
 
-.pendantsGallery .image3 {
-  background-image: url(../img/pen3.jpg);
-  background-size: cover;
-  background-position: center;
+.pendantGallery .galleryContainer .image3 {
+  background-image: url(../img/pendant3.jpg);
 }
 
-.pendantsGallery .image4 {
-  background-image: url(../img/pen4.jpg);
-  background-size: cover;
-  background-position: center;
+.pendantGallery .galleryContainer .image4 {
+  background-image: url(../img/pendant4.jpg);
 }
 
-.pendantsGallery .image5 {
-  background-image: url(../img/pen5.jpg);
-  background-size: cover;
-  background-position: center;
+.pendantGallery .galleryContainer .image5 {
+  background-image: url(../img/pendant5.jpg);
 }
 
-.pendantsGallery .image6 {
-  background-image: url(../img/pen6.jpg);
-  background-size: cover;
-  background-position: center;
+.pendantGallery .galleryContainer .image6 {
+  background-image: url(../img/pendant6.jpg);
 }
 
-.pendantsGallery .image7 {
-  background-image: url(../img/pen7.jpg);
-  background-size: cover;
-  background-position: center;
+.pendantGallery .galleryContainer .image7 {
+  background-image: url(../img/pendant7.jpg);
 }
 
-.pendantsGallery .image8 {
-  background-image: url(../img/pen8.jpg);
-  background-size: cover;
-  background-position: center;
+.pendantGallery .galleryContainer .image8 {
+  background-image: url(../img/pendant8.jpg);
 }
 
-.pendantsGallery .image9 {
-  background-image: url(../img/pen9.jpg);
-  background-size: cover;
-  background-position: center;
+.pendantGallery .galleryContainer .image9 {
+  background-image: url(../img/pendant9.jpg);
 }
 
-.braceletsGallery .image1 {
-  background-image: url(../img/brac1.jpg);
-  background-size: cover;
-  background-position: center;
+.braceletGallery .galleryContainer .image1 {
+  background-image: url(../img/bracelet1.jpg);
 }
 
-.braceletsGallery .image2 {
-  background-image: url(../img/brac2.jpg);
-  background-size: cover;
-  background-position: center;
+.braceletGallery .galleryContainer .image2 {
+  background-image: url(../img/bracelet2.jpg);
 }
 
-.braceletsGallery .image3 {
-  background-image: url(../img/brac3.jpg);
-  background-size: cover;
-  background-position: center;
+.braceletGallery .galleryContainer .image3 {
+  background-image: url(../img/bracelet3.jpg);
 }
 
-.braceletsGallery .image4 {
-  background-image: url(../img/brac4.jpg);
-  background-size: cover;
-  background-position: center;
+.braceletGallery .galleryContainer .image4 {
+  background-image: url(../img/bracelet4.jpg);
 }
 
-.braceletsGallery .image5 {
-  background-image: url(../img/brac5.jpg);
-  background-size: cover;
-  background-position: center;
+.braceletGallery .galleryContainer .image5 {
+  background-image: url(../img/bracelet5.jpg);
 }
 
-.braceletsGallery .image6 {
-  background-image: url(../img/brac6.jpg);
-  background-size: cover;
-  background-position: center;
+.braceletGallery .galleryContainer .image6 {
+  background-image: url(../img/bracelet6.jpg);
 }
 
-.stonesGallery .image1 {
-  background-image: url(../img/st1.jpg);
-  background-size: cover;
-  background-position: center;
+.stoneGallery .galleryContainer .image1 {
+  background-image: url(../img/stone1.jpg);
 }
 
-.stonesGallery .image2 {
-  background-image: url(../img/st2.jpg);
-  background-size: cover;
-  background-position: center;
+.stoneGallery .galleryContainer .image2 {
+  background-image: url(../img/stone2.jpg);
 }
 
-.stonesGallery .image3 {
-  background-image: url(../img/st3.jpg);
-  background-size: cover;
-  background-position: center;
+.stoneGallery .galleryContainer .image3 {
+  background-image: url(../img/stone3.jpg);
 }
 
-.stonesGallery .image4 {
-  background-image: url(../img/st4.jpg);
-  background-size: cover;
-  background-position: center;
+.stoneGallery .galleryContainer .image4 {
+  background-image: url(../img/stone4.jpg);
 }
 
-.stonesGallery .image5 {
-  background-image: url(../img/st5.jpg);
-  background-size: cover;
-  background-position: center;
+.stoneGallery .galleryContainer .image5 {
+  background-image: url(../img/stone5.jpg);
 }
 
-.stonesGallery .image6 {
-  background-image: url(../img/st6.jpg);
-  background-size: cover;
-  background-position: center;
+.stoneGallery .galleryContainer .image6 {
+  background-image: url(../img/stone6.jpg);
 }
 
-.stonesGallery .image7 {
-  background-image: url(../img/st7.jpg);
-  background-size: cover;
-  background-position: center;
+.stoneGallery .galleryContainer .image7 {
+  background-image: url(../img/stone7.jpg);
 }
 
-.silverGallery .image1 {
-  background-image: url(../img/ss1.jpg);
-  background-size: cover;
-  background-position: center;
+.silverGallery .galleryContainer .image1 {
+  background-image: url(../img/silver1.jpg);
 }
 
-.silverGallery .image2 {
-  background-image: url(../img/ss2.jpg);
-  background-size: cover;
-  background-position: center;
+.silverGallery .galleryContainer .image2 {
+  background-image: url(../img/silver2.jpg);
 }
 
-.silverGallery .image3 {
-  background-image: url(../img/ss3.jpg);
-  background-size: cover;
-  background-position: center;
+.silverGallery .galleryContainer .image3 {
+  background-image: url(../img/silver3.jpg);
 }
 
-.silverGallery .image4 {
-  background-image: url(../img/ss4.jpg);
-  background-size: cover;
-  background-position: center;
+.silverGallery .galleryContainer .image4 {
+  background-image: url(../img/silver4.jpg);
 }
 
-.silverGallery .image5 {
-  background-image: url(../img/ss5.jpg);
-  background-size: cover;
-  background-position: center;
+.silverGallery .galleryContainer .image5 {
+  background-image: url(../img/silver5.jpg);
 }
 
-.silverGallery .image6 {
-  background-image: url(../img/ss6.jpg);
-  background-size: cover;
-  background-position: center;
+.silverGallery .galleryContainer .image6 {
+  background-image: url(../img/silver6.jpg);
 }
 
-.silverGallery .image7 {
-  background-image: url(../img/ss7.jpg);
-  background-size: cover;
-  background-position: center;
+.silverGallery .galleryContainer .image7 {
+  background-image: url(../img/silver7.jpg);
 }
 
-.silverGallery .image8 {
-  background-image: url(../img/ss8.jpg);
-  background-size: cover;
-  background-position: center;
+.silverGallery .galleryContainer .image8 {
+  background-image: url(../img/silver8.jpg);
 }
 
-.silverGallery .image9 {
-  background-image: url(../img/ss9.jpg);
-  background-size: cover;
-  background-position: center;
+.silverGallery .galleryContainer .image9 {
+  background-image: url(../img/silver9.jpg);
 }
 
 footer {
@@ -709,7 +608,7 @@ footer {
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 540px) {
   .cards {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -721,6 +620,10 @@ footer {
   .cards .item {
     width: 40vw;
   }
+  .cards .item .card .card-body a {
+    font-size: 0.8em;
+    width: 125px;
+  }
   .about {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -728,9 +631,9 @@ footer {
             flex-direction: row-reverse;
   }
   .aboutText__container {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     width: 40vw;
     height: 40vw;
     overflow-y: scroll;
@@ -786,9 +689,14 @@ footer {
   .cards .item {
     width: 30vw;
   }
+  .cards .item .card .card-body a {
+    font-size: 1em;
+    width: 150px;
+  }
   .aboutText__container {
     width: 40vw;
     height: 40vw;
+    overflow-x: unset;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -797,8 +705,8 @@ footer {
     font-size: 0.5;
   }
   .aboutText__container h3 {
-    font-size: 0.8;
-    padding: 0px;
+    font-size: 9;
+    padding: 10px;
   }
   .form {
     width: 40vw;

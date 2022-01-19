@@ -120,8 +120,8 @@ body
         justify-content: center
         align-items: center
         text-align: justify
-        & h3
-            padding-top: 3vw
+        & h1
+            padding-top: 20px
     & .aboutCarousel__container
         width: 100vw
 
@@ -150,22 +150,23 @@ body
     display: flex
     flex-direction: column
     align-items: center
-    justify-content: space-evenly
     gap: 10px
     & h2
         padding: 20px
         text-align: center
-        & .form
-            background-color: $color3
-            padding: 10px
-            border-radius: 5px
-            & form
-                padding: 2px
-                & .bg-info
-                    background-color: $color1 !important
-        & .location
-            & iframe
-            width: 100vw
+    & .form
+        background-color: $color3
+        padding: 10px
+        border-radius: 5px
+        & form
+            padding: 2px
+            & .bg-info
+                background-color: $color1 !important
+    & .location
+        width: 100vw
+        & iframe
+            width: 100%
+            height: 300px
 
 // ----+++++_____________________ Gallery General ______________________+++++---- *
 .galleryTittle
@@ -187,18 +188,16 @@ body
     align-items: center
     gap: 10px
     @extend .backgroundImage
-
-.image
-    width: 80vw
-    height: 80vw
-    box-sizing: border-box
-    border: 4px solid white
-    margin: 0px
-    padding: 0px
-    transition: 1s
-
-.image:hover
-    transform: scale(1.2)
+    & .image
+        width: 80vw
+        height: 80vw
+        box-sizing: border-box
+        border: 4px solid white
+        margin: 0px
+        padding: 0px
+        transition: 1s
+    & .image:hover
+        transform: scale(1.2)
 
 .bottonTop
     background-color: $color1
@@ -296,41 +295,45 @@ footer
     .about
         flex-direction: row-reverse
 
-    .aboutText__container
-        justify-content: flex-end
-        width: 40vw
-        height: 40vw
-        overflow-y: scroll
+        & .aboutText__container
+            justify-content: flex-start
+            width: 40vw
+            height: 40vw
+            overflow-y: scroll
+            & p
+                font-size: 0.8em
 
-    .aboutCarousel__container
-        width: 60vw
+        & .aboutCarousel__container
+            width: 60vw
 
     //____________________________xxxxxx CONTACT SECTION 768px MEDIUM xxxxxxx_____________________________*/
     .contact
         flex-direction: row
         flex-wrap: wrap
+        gap: 0px
         & h2
             width: 100vw
 
-    .form
-        width: 50vw
+        & .form
+            width: 45vw
 
-    .location
-        width: 50vw
-        box-sizing: border-box
-        border: 2px white solid
-        & iframe
-            width: 100%
+        & .location
+            width: 45vw
+            height: 300px
+            box-sizing: border-box
+            border: 2px white solid
+            & iframe
+                width: 100%
+                height: 100%
 
     //____________________________xxxxxx CARDS SECTION 768px MEDIUM xxxxxxx_____________________________*/
     .galleryContainer
         flex-direction: row
         flex-wrap: wrap
         gap: 20px
-
-    .image
-        width: 35vw
-        height: 35vw
+        & .image
+            width: 35vw
+            height: 35vw
 
     //____________________________xxxxxx FOOTER 768px MEDIUM xxxxxxx_____________________________*
     .footer__info
@@ -356,27 +359,25 @@ footer
         height: 40vw
         overflow-x: unset
         justify-content: center
+        & h1
+            font-size: 40px
         & p
-            font-size: 0.5
-        & h3
-            font-size: 9
-            padding: 10px
+            font-size: 1.1em !important
 
     //____________________________xxxxxx CONTACT SECTION 992px LARGE xxxxxxx_____________________________*
     .form
         width: 40vw
-        margin: 0px
-
-    .location
-        width: 40vw
-        margin: 0px
+        gap: 10vw
+        justify-content: space-evenly
+        & .location
+            width: 40vw
+            margin: 0px
 
     //____________________________xxxxxx CARDS SECTION 992px LARGE xxxxxxx_____________________________*/
     .galleryContainer
         flex-direction: row
         flex-wrap: wrap
         gap: 20px
-
-    .image
-        width: 25vw
-        height: 25vw
+        & .image
+            width: 25vw
+            height: 25vw

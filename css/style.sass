@@ -9,6 +9,7 @@ $color4: #DFEEEA
 $font1: 'Raleway', sans-serif
 *
     font-family: $font1
+    scroll-behavior: smooth
 
 body
     margin: 0
@@ -178,6 +179,8 @@ body
     & h1
         color: $color4
 
+
+
 .galleryContainer
     background-color: $color2
     background-image: url(../img/bg3.svg)
@@ -187,6 +190,7 @@ body
     justify-content: center
     align-items: center
     gap: 10px
+    padding: 3vh
     @extend .backgroundImage
     & .image
         width: 80vw
@@ -199,24 +203,19 @@ body
     & .image:hover
         transform: scale(1.2)
 
-.bottonTop
-    background-color: $color1
-    box-sizing: border-box
-    height: 70px
-    border: $color4 2px solid
-    margin: 7px 0px 7px 0px
-    display: flex
-    justify-content: center
-    align-items: center
-    & a
-        text-decoration: none
-        font-size: 30px
-        color: white
-        width: 70%
-        text-align: center
 
-.bottonTop :hover
-    transform: scale(1.5)
+.scroll-to-top
+    position: fixed
+    inset: auto 1rem 1rem auto
+    color: $color1
+    padding: 0
+    margin: 0
+    font-size: 3em
+    text-shadow: 0 0 3px $color4, 0 0 5px white
+
+.scroll-to-top :hover
+    color: $color2
+
 
 //                -+-+-+-++-+--+-+            filling gallery in           --++-+--++-+-+-++--+-+
 $galleryName: ("ring" : 10, "earing" : 6, "pendant" : 9, "bracelet" : 6, "stone" : 7, "silver" : 9)
@@ -302,7 +301,7 @@ footer
             overflow-y: scroll
             & p
                 font-size: 0.8em
-
+        
         & .aboutCarousel__container
             width: 60vw
 
@@ -336,11 +335,13 @@ footer
             height: 35vw
 
     //____________________________xxxxxx FOOTER 768px MEDIUM xxxxxxx_____________________________*
-    .footer__info
-        width: 60%
+    footer
+        font-size: 1.2em
+        .footer__info
+            width: 60%
 
-    .footer__socialMedia
-        width: 40%
+        .footer__socialMedia
+            width: 40%
 
 @media (min-width: 992px)
     //____________________________xxxxxx CARDS SECTION 992px LARGE xxxxxxx_____________________________*
@@ -381,3 +382,10 @@ footer
         & .image
             width: 25vw
             height: 25vw
+    
+    //____________________________xxxxxx FOOTER 922px LARGE xxxxxxx_____________________________*
+    footer
+        font-size: 1.4em
+
+
+

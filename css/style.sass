@@ -25,7 +25,7 @@ body
 .navbar
     background-color: $color3
     & .navbar-brand
-        margin-right: 80px
+        margin-right: 0px
 
     & .collapse
         justify-content: center
@@ -236,43 +236,43 @@ footer
     background-color: $color1
     color: $color4
     box-sizing: border-box
-    padding: 0px
+    padding-top: 30px
     margin: 0px !important
 
-.column
-    float: left
-    width: 100vw
-    padding: 20px
+    & .column
+        float: left
+        width: 100vw
+        padding: 20px
 
-.footer__info
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    text-align: center
+    & .footer__info
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        text-align: center
 
-.footer__socialMedia
-    font-size: 1em
-    display: flex
-    justify-content: center
-    align-items: center
-    & ul
+    & .footer__socialMedia
+        font-size: 0.9em
         display: flex
         justify-content: center
         align-items: center
-        padding: 0px
-        & li
-            display: inline
-            list-style: none
-            & a
-                color: $color4
-                padding: 6px
+        & ul
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0px
+            & li
+                display: inline
+                list-style: none
+                & a
+                    color: $color4
+                    padding: 6px
 
-.footer__message
-    text-align: center
+    & .footer__message
+        text-align: center
 
-.footer__signature
-    text-align: center
+    & .footer__signature
+        text-align: center
 
 //_______________________________xxxxxxxxxxxxx________________________________*
 // ----+++++_____________________ MEDIA QUERY ______________________+++++---- *

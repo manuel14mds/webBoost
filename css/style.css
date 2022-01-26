@@ -14,7 +14,7 @@ body {
 }
 
 .navbar .navbar-brand {
-  margin-right: 80px;
+  margin-right: 0px;
 }
 
 .navbar .collapse {
@@ -524,17 +524,17 @@ footer {
   color: #DFEEEA;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0px;
+  padding-top: 30px;
   margin: 0px !important;
 }
 
-.column {
+footer .column {
   float: left;
   width: 100vw;
   padding: 20px;
 }
 
-.footer__info {
+footer .footer__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -551,8 +551,8 @@ footer {
   text-align: center;
 }
 
-.footer__socialMedia {
-  font-size: 1em;
+footer .footer__socialMedia {
+  font-size: 0.9em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -564,7 +564,7 @@ footer {
           align-items: center;
 }
 
-.footer__socialMedia ul {
+footer .footer__socialMedia ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -577,21 +577,21 @@ footer {
   padding: 0px;
 }
 
-.footer__socialMedia ul li {
+footer .footer__socialMedia ul li {
   display: inline;
   list-style: none;
 }
 
-.footer__socialMedia ul li a {
+footer .footer__socialMedia ul li a {
   color: #DFEEEA;
   padding: 6px;
 }
 
-.footer__message {
+footer .footer__message {
   text-align: center;
 }
 
-.footer__signature {
+footer .footer__signature {
   text-align: center;
 }
 
